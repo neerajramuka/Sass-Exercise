@@ -1,0 +1,126 @@
+$full: 100%;
+$black: #231f21;
+$white: #fff;
+$container: 950px;
+$image-tree: "images/tree.png";
+
+@mixin radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin btn-color($background, $border) {
+  background-color: $background;
+  border: 3px solid $border;
+}
+html {
+  height: $full;
+}
+body {
+  @extend html;
+  margin: 0;
+}
+main {
+  width: $container;
+  margin: 0 auto;
+}
+article {
+  width: 50%;
+  float: left;
+}
+header {
+  background-color: $black;
+  position: fixed;
+  width: $full;
+  ul {
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    li {
+      text-decoration: none;
+      display: inline-block;
+      a {
+      color: $white;
+      line-height: 50px;
+      text-decoration: none;
+      padding: 0 15px;
+      font-size: 20px;
+      &:hover {
+        color: yellow;
+      }
+      }
+    }
+  }
+}
+
+@mixin block($image)  {
+  background: url($image);
+  background-size: cover;
+  height: calc(100% - 100px);
+  padding-top: 100px;
+  .btn-tree {
+    background: url($image-tree) no-repeat center;
+    button {
+      margin: 397px auto 0;
+      display: block;
+      font-size: 25px;
+      padding: 15px;
+      color: $white;
+      font-weight: bold;
+      @include radius(10px);
+    }
+  }
+}
+
+.content {
+  margin-top: 25px;
+  h1 {
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    font-size: 42px;
+    color: $white;
+  }
+  p {
+    @extend h1;
+    font-size: 20px;
+  }
+}
+
+.one {
+  @include block("images/img-1.jpg");
+  .btn-tree {
+    button {
+      @include btn-color(#f90, #c60);
+    }
+  }
+}
+.two {
+  @include block("images/img-2.jpg");
+  .content {
+    float: right;
+  }
+  .btn-tree {
+    button {
+      @include btn-color(#02c7e6, #0197b2);
+    }
+  }
+}
+.three {
+  @include block("images/img-3.jpg");
+  .btn-tree {
+    button {
+      @include btn-color(#8db737, #719d18);
+    }
+  }
+}
+.four {
+  @include block("images/img-4.jpg");
+  .content {
+    float: right;
+  }
+  .btn-tree {
+    button {
+      @include btn-color(#cc0000, #a20303);
+    }
+  }
+}
