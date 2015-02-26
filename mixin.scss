@@ -1,0 +1,14 @@
+@mixin radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin btn-color($background, $border) {
+  background-color: $background;
+  border: 3px solid $border;
+}
+@mixin background-image($image)  {
+  background: url($image);
+  background-size: cover;
+  background-attachment: fixed;
+}

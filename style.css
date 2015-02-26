@@ -4,7 +4,7 @@ html, body {
 body {
   margin: 0; }
 
-main {
+.container {
   width: 950px;
   margin: 0 auto; }
 
@@ -16,21 +16,37 @@ header {
   background-color: #231f21;
   position: fixed;
   width: 100%; }
-  header ul {
+  header .navigation {
     padding: 0;
     text-align: center;
     margin: 0; }
-    header ul li {
+    header .navigation li {
       text-decoration: none;
       display: inline-block; }
-      header ul li a {
+      header .navigation li a {
         color: #fff;
         line-height: 50px;
         text-decoration: none;
         padding: 0 15px;
         font-size: 20px; }
-        header ul li a:hover {
+        header .navigation li a:hover {
           color: yellow; }
+
+.block, .one, .two, .three, .four {
+  height: calc(100% - 100px);
+  padding-top: 100px; }
+  .block .btn-tree, .one .btn-tree, .two .btn-tree, .three .btn-tree, .four .btn-tree {
+    background: url("images/tree.png") no-repeat center; }
+    .block .btn-tree button, .one .btn-tree button, .two .btn-tree button, .three .btn-tree button, .four .btn-tree button {
+      margin: 397px auto 0;
+      display: block;
+      font-size: 25px;
+      padding: 15px;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px; }
 
 .content {
   margin-top: 25px; }
@@ -45,20 +61,7 @@ header {
 .one {
   background: url("images/img-1.jpg");
   background-size: cover;
-  height: calc(100% - 100px);
-  padding-top: 100px; }
-  .one .btn-tree {
-    background: url("images/tree.png") no-repeat center; }
-    .one .btn-tree button {
-      margin: 397px auto 0;
-      display: block;
-      font-size: 25px;
-      padding: 15px;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px; }
+  background-attachment: fixed; }
   .one .btn-tree button {
     background-color: #f90;
     border: 3px solid #c60; }
@@ -66,20 +69,7 @@ header {
 .two {
   background: url("images/img-2.jpg");
   background-size: cover;
-  height: calc(100% - 100px);
-  padding-top: 100px; }
-  .two .btn-tree {
-    background: url("images/tree.png") no-repeat center; }
-    .two .btn-tree button {
-      margin: 397px auto 0;
-      display: block;
-      font-size: 25px;
-      padding: 15px;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px; }
+  background-attachment: fixed; }
   .two .content {
     float: right; }
   .two .btn-tree button {
@@ -89,20 +79,7 @@ header {
 .three {
   background: url("images/img-3.jpg");
   background-size: cover;
-  height: calc(100% - 100px);
-  padding-top: 100px; }
-  .three .btn-tree {
-    background: url("images/tree.png") no-repeat center; }
-    .three .btn-tree button {
-      margin: 397px auto 0;
-      display: block;
-      font-size: 25px;
-      padding: 15px;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px; }
+  background-attachment: fixed; }
   .three .btn-tree button {
     background-color: #8db737;
     border: 3px solid #719d18; }
@@ -110,20 +87,7 @@ header {
 .four {
   background: url("images/img-4.jpg");
   background-size: cover;
-  height: calc(100% - 100px);
-  padding-top: 100px; }
-  .four .btn-tree {
-    background: url("images/tree.png") no-repeat center; }
-    .four .btn-tree button {
-      margin: 397px auto 0;
-      display: block;
-      font-size: 25px;
-      padding: 15px;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px; }
+  background-attachment: fixed; }
   .four .content {
     float: right; }
   .four .btn-tree button {

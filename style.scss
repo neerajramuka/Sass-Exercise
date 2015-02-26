@@ -1,18 +1,6 @@
-$full: 100%;
-$black: #231f21;
-$white: #fff;
-$container: 950px;
-$image-tree: "images/tree.png";
+@import "var.scss";
+@import "mixin.scss";
 
-@mixin radius($radius) {
-  border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-}
-@mixin btn-color($background, $border) {
-  background-color: $background;
-  border: 3px solid $border;
-}
 html {
   height: $full;
 }
@@ -20,7 +8,7 @@ body {
   @extend html;
   margin: 0;
 }
-main {
+.container {
   width: $container;
   margin: 0 auto;
 }
@@ -32,7 +20,7 @@ header {
   background-color: $black;
   position: fixed;
   width: $full;
-  ul {
+  .navigation {
     padding: 0;
     text-align: center;
     margin: 0;
@@ -40,22 +28,20 @@ header {
       text-decoration: none;
       display: inline-block;
       a {
-      color: $white;
-      line-height: 50px;
-      text-decoration: none;
-      padding: 0 15px;
-      font-size: 20px;
-      &:hover {
-        color: yellow;
-      }
+        color: $white;
+        line-height: 50px;
+        text-decoration: none;
+        padding: 0 15px;
+        font-size: 20px;
+        &:hover {
+          color: yellow;
+        }
       }
     }
   }
 }
 
-@mixin block($image)  {
-  background: url($image);
-  background-size: cover;
+.block {
   height: calc(100% - 100px);
   padding-top: 100px;
   .btn-tree {
@@ -87,7 +73,8 @@ header {
 }
 
 .one {
-  @include block("images/img-1.jpg");
+  @include background-image("images/img-1.jpg");
+  @extend .block;
   .btn-tree {
     button {
       @include btn-color(#f90, #c60);
@@ -95,7 +82,8 @@ header {
   }
 }
 .two {
-  @include block("images/img-2.jpg");
+  @include background-image("images/img-2.jpg");
+  @extend .block;
   .content {
     float: right;
   }
@@ -106,7 +94,8 @@ header {
   }
 }
 .three {
-  @include block("images/img-3.jpg");
+  @include background-image("images/img-3.jpg");
+  @extend .block;
   .btn-tree {
     button {
       @include btn-color(#8db737, #719d18);
@@ -114,7 +103,8 @@ header {
   }
 }
 .four {
-  @include block("images/img-4.jpg");
+  @include background-image("images/img-4.jpg");
+  @extend .block;
   .content {
     float: right;
   }
