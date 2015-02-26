@@ -1,5 +1,6 @@
 @import "var.scss";
 @import "mixin.scss";
+@import url("http://fonts.googleapis.com/css?family=Oswald");
 
 html {
   height: $full;
@@ -32,7 +33,7 @@ header {
         line-height: 50px;
         text-decoration: none;
         padding: 0 15px;
-        font-size: 20px;
+        @include font("arial", 20px);
         &:hover {
           color: yellow;
         }
@@ -49,8 +50,8 @@ header {
     button {
       margin: 397px auto 0;
       display: block;
-      font-size: 25px;
-      padding: 15px;
+      @include font("Oswald", 30px);
+      padding: 15px 30px;
       color: $white;
       font-weight: bold;
       @include radius(10px);
@@ -61,14 +62,14 @@ header {
 .content {
   margin-top: 25px;
   h1 {
+    @include font("Oswald", 45px);
     background: rgba(0,0,0,0.4);
     padding: 10px;
-    font-size: 42px;
     color: $white;
   }
   p {
     @extend h1;
-    font-size: 20px;
+    @include font("arial", 20px);
   }
 }
 
