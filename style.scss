@@ -13,11 +13,7 @@ body {
   margin: 0 auto;
   width: $container;
 }
-article {
-  float: left;
-  width: 50%;
-}
-header {
+.header {
   background-color: $black;
   position: fixed;
   width: $full;
@@ -46,7 +42,9 @@ header {
   padding-top: 100px;
   .btn-tree {
     background: url($image-tree) no-repeat center;
-    button {
+    float: left;
+    width: 50%;
+    .button {
       @include font("Oswald", 30px);
       @include radius(10px);
       color: $white;
@@ -58,15 +56,18 @@ header {
   }
 }
 .content {
+  float: left;
   margin-top: 25px;
-  h1 {
+  width: 50%;
+  .heading {
     @include font("Oswald", 45px);
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.5);
     color: $white;
+    font-weight: normal;
     padding: 10px;
   }
   p {
-    @extend h1;
+    @extend .heading;
     @include font("arial", 20px);
   }
 }
@@ -74,7 +75,7 @@ header {
   @extend .block;
   @include background-image("images/img-1.jpg");
   .btn-tree {
-    button {
+    .button {
       @include btn-color(#f90, #c60);
     }
   }
@@ -86,7 +87,7 @@ header {
     float: right;
   }
   .btn-tree {
-    button {
+    .button {
       @include btn-color(#02c7e6, #0197b2);
     }
   }
@@ -95,7 +96,7 @@ header {
   @extend .block;
   @include background-image("images/img-3.jpg");
   .btn-tree {
-    button {
+    .button {
       @include btn-color(#8db737, #719d18);
     }
   }
@@ -107,7 +108,7 @@ header {
     float: right;
   }
   .btn-tree {
-    button {
+    .button {
       @include btn-color(#cc0000, #a20303);
     }
   }

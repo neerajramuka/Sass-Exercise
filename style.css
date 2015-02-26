@@ -9,37 +9,35 @@ body {
   margin: 0 auto;
   width: 950px; }
 
-article {
-  float: left;
-  width: 50%; }
-
-header {
+.header {
   background-color: #231f21;
   position: fixed;
   width: 100%; }
-  header .navigation {
+  .header .navigation {
     margin: 0;
     padding: 0;
     text-align: center; }
-    header .navigation li {
+    .header .navigation li {
       display: inline-block;
       text-decoration: none; }
-      header .navigation li a {
+      .header .navigation li a {
         font-family: "arial";
         font-size: 20px;
         color: #fff;
         line-height: 50px;
         padding: 0 15px;
         text-decoration: none; }
-        header .navigation li a:hover {
+        .header .navigation li a:hover {
           color: yellow; }
 
 .block, .one, .two, .three, .four {
   height: calc(100% - 100px);
   padding-top: 100px; }
   .block .btn-tree, .one .btn-tree, .two .btn-tree, .three .btn-tree, .four .btn-tree {
-    background: url("images/tree.png") no-repeat center; }
-    .block .btn-tree button, .one .btn-tree button, .two .btn-tree button, .three .btn-tree button, .four .btn-tree button {
+    background: url("images/tree.png") no-repeat center;
+    float: left;
+    width: 50%; }
+    .block .btn-tree .button, .one .btn-tree .button, .two .btn-tree .button, .three .btn-tree .button, .four .btn-tree .button {
       font-family: "Oswald";
       font-size: 30px;
       border-radius: 10px;
@@ -52,50 +50,57 @@ header {
       padding: 15px 30px; }
 
 .content {
-  margin-top: 25px; }
-  .content h1, .content p {
+  float: left;
+  margin-top: 25px;
+  width: 50%; }
+  .content .heading, .content p {
     font-family: "Oswald";
     font-size: 45px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
+    font-weight: normal;
     padding: 10px; }
   .content p {
     font-family: "arial";
     font-size: 20px; }
 
 .one {
-  background: url("images/img-1.jpg");
-  background-size: cover;
-  background-attachment: fixed; }
-  .one .btn-tree button {
+  background-attachment: fixed;
+  background-image: url("images/img-1.jpg");
+  background-position: center;
+  background-size: cover; }
+  .one .btn-tree .button {
     background-color: #f90;
     border: 3px solid #c60; }
 
 .two {
-  background: url("images/img-2.jpg");
-  background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-image: url("images/img-2.jpg");
+  background-position: center;
+  background-size: cover; }
   .two .content {
     float: right; }
-  .two .btn-tree button {
+  .two .btn-tree .button {
     background-color: #02c7e6;
     border: 3px solid #0197b2; }
 
 .three {
-  background: url("images/img-3.jpg");
-  background-size: cover;
-  background-attachment: fixed; }
-  .three .btn-tree button {
+  background-attachment: fixed;
+  background-image: url("images/img-3.jpg");
+  background-position: center;
+  background-size: cover; }
+  .three .btn-tree .button {
     background-color: #8db737;
     border: 3px solid #719d18; }
 
 .four {
-  background: url("images/img-4.jpg");
-  background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-image: url("images/img-4.jpg");
+  background-position: center;
+  background-size: cover; }
   .four .content {
     float: right; }
-  .four .btn-tree button {
+  .four .btn-tree .button {
     background-color: #cc0000;
     border: 3px solid #a20303; }
 
