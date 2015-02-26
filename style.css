@@ -6,31 +6,31 @@ body {
   margin: 0; }
 
 .container {
-  width: 950px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 950px; }
 
 article {
-  width: 50%;
-  float: left; }
+  float: left;
+  width: 50%; }
 
 header {
   background-color: #231f21;
   position: fixed;
   width: 100%; }
   header .navigation {
+    margin: 0;
     padding: 0;
-    text-align: center;
-    margin: 0; }
+    text-align: center; }
     header .navigation li {
-      text-decoration: none;
-      display: inline-block; }
+      display: inline-block;
+      text-decoration: none; }
       header .navigation li a {
+        font-family: "arial";
+        font-size: 20px;
         color: #fff;
         line-height: 50px;
-        text-decoration: none;
         padding: 0 15px;
-        font-family: "arial";
-        font-size: 20px; }
+        text-decoration: none; }
         header .navigation li a:hover {
           color: yellow; }
 
@@ -40,16 +40,16 @@ header {
   .block .btn-tree, .one .btn-tree, .two .btn-tree, .three .btn-tree, .four .btn-tree {
     background: url("images/tree.png") no-repeat center; }
     .block .btn-tree button, .one .btn-tree button, .two .btn-tree button, .three .btn-tree button, .four .btn-tree button {
-      margin: 397px auto 0;
-      display: block;
       font-family: "Oswald";
       font-size: 30px;
-      padding: 15px 30px;
-      color: #fff;
-      font-weight: bold;
       border-radius: 10px;
       -webkit-border-radius: 10px;
-      -moz-border-radius: 10px; }
+      -moz-border-radius: 10px;
+      color: #fff;
+      display: block;
+      font-weight: bold;
+      margin: 397px auto 0;
+      padding: 15px 30px; }
 
 .content {
   margin-top: 25px; }
@@ -57,8 +57,8 @@ header {
     font-family: "Oswald";
     font-size: 45px;
     background: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    color: #fff; }
+    color: #fff;
+    padding: 10px; }
   .content p {
     font-family: "arial";
     font-size: 20px; }

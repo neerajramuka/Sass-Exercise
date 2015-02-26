@@ -10,30 +10,30 @@ body {
   margin: 0;
 }
 .container {
-  width: $container;
   margin: 0 auto;
+  width: $container;
 }
 article {
-  width: 50%;
   float: left;
+  width: 50%;
 }
 header {
   background-color: $black;
   position: fixed;
   width: $full;
   .navigation {
+    margin: 0;
     padding: 0;
     text-align: center;
-    margin: 0;
     li {
-      text-decoration: none;
       display: inline-block;
+      text-decoration: none;
       a {
+        @include font("arial", 20px);
         color: $white;
         line-height: 50px;
-        text-decoration: none;
         padding: 0 15px;
-        @include font("arial", 20px);
+        text-decoration: none;
         &:hover {
           color: yellow;
         }
@@ -41,41 +41,38 @@ header {
     }
   }
 }
-
 .block {
   height: calc(100% - 100px);
   padding-top: 100px;
   .btn-tree {
     background: url($image-tree) no-repeat center;
     button {
-      margin: 397px auto 0;
-      display: block;
       @include font("Oswald", 30px);
-      padding: 15px 30px;
-      color: $white;
-      font-weight: bold;
       @include radius(10px);
+      color: $white;
+      display: block;
+      font-weight: bold;
+      margin: 397px auto 0;
+      padding: 15px 30px;
     }
   }
 }
-
 .content {
   margin-top: 25px;
   h1 {
     @include font("Oswald", 45px);
     background: rgba(0,0,0,0.4);
-    padding: 10px;
     color: $white;
+    padding: 10px;
   }
   p {
     @extend h1;
     @include font("arial", 20px);
   }
 }
-
 .one {
-  @include background-image("images/img-1.jpg");
   @extend .block;
+  @include background-image("images/img-1.jpg");
   .btn-tree {
     button {
       @include btn-color(#f90, #c60);
@@ -83,8 +80,8 @@ header {
   }
 }
 .two {
-  @include background-image("images/img-2.jpg");
   @extend .block;
+  @include background-image("images/img-2.jpg");
   .content {
     float: right;
   }
@@ -95,8 +92,8 @@ header {
   }
 }
 .three {
-  @include background-image("images/img-3.jpg");
   @extend .block;
+  @include background-image("images/img-3.jpg");
   .btn-tree {
     button {
       @include btn-color(#8db737, #719d18);
@@ -104,8 +101,8 @@ header {
   }
 }
 .four {
-  @include background-image("images/img-4.jpg");
   @extend .block;
+  @include background-image("images/img-4.jpg");
   .content {
     float: right;
   }
